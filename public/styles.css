@@ -182,6 +182,10 @@ nav a.active {
   border-bottom: 1px solid var(--black);
 }
 
+.add-new {
+  margin-top: 2rem;
+}
+
 .add-new:hover {
   background: var(--blue);
   color: var(--white);
@@ -213,25 +217,25 @@ nav a.active {
   padding: 2rem 0;
 }
 
+@media only screen and (max-width: 1075px) {
+  .book { 
+    width: 48%; 
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  .form {
+    height: 1400px;
+  }
+
   .home .main {
     margin: 2rem 3rem 1rem;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .book { 
-    width: 48%; 
-  }
-
-  .form {
-    height: 1400px;
-  }
-}
-
 @media only screen and (max-width: 550px) {
   .book { 
-    max-width: 300px;
+    width: 100%; 
     margin: 1rem auto;
   }
 
