@@ -1,0 +1,46 @@
+
+{
+  "books": [
+    {
+      "title":"The Calamity Club", 
+      "author":"Kathryn Stockett", 
+      "image":"calamityClub.jpg"
+    }, 
+    {
+      "title":"Daddy Issues: A Memoir", 
+      "author":"Sofia Franklyn", 
+      "image":"daddyIssues.jpg"
+    }, 
+    {
+      "title":"The Lost World", 
+      "author":"Michael Crichton", 
+      "image":"lostWorld.jpg"
+    }, 
+    {
+      "title":"Butter", 
+      "author":"Asako Yuzuki", 
+      "image":"butter.jpg"
+    }, 
+    {
+      "title":"Chasing the Boogeyman", 
+      "author":"Richard Chizmar", 
+      "image":"boogeyman.jpg"
+    },
+    {
+      "title":"Lonely Castle in the Mirror", 
+      "author":"Mizuki Tsujimura", 
+      "image":"lonelyCastle.jpg"
+    }, 
+    { 
+      "title":"Piranesi", 
+      "author":"Susanna Clark", 
+      "image":"piranesi.jpg"
+    }, 
+    {
+      "title":"The Midnight Library", 
+      "author":"Matt Haig", 
+      "image":"midnightLib.jpg"
+    }
+  ]
+}
+
