@@ -43,4 +43,40 @@ $(document).ready(function(){
     console.error("Could not load books.json:", textStatus, error);
   });
 
+    // put json data into archive
+  $.getJSON("/documents/archive.json")
+  .done(function (data) {
+    shuffle(data.books);
+    $.each(data.books, function (_, book) {
+      const card = $("<div>").addClass("book");
+
+      const container = $("<div>").addClass("book-container").appendTo(card);
+
+      $("<p>").addClass("meeting").html("<span class='label'>meeting #1 ~  </span>" + book.meeting).appendTo(container);
+      $("<p>").addClass("title").html("<span class='label'>title ~  </span>" + book.title).appendTo(container);
+      $("<p>").addClass("author").html("<span class='label'>by ~  </span>" + book.author).appendTo(container);
+
+      $("<img>")
+        .attr("src", "/images/covers/" + book.image)
+        .attr("alt", "Book cover for " + book.title + " by " + book.author)
+        .appendTo(card);
+
+      $("#archive").append(card);
+    });
+
+    //bookshelf grid
+    var grid = $('#archive');
+    grid.imagesLoaded(function () {
+      grid.masonry({
+        itemSelector: '.book',
+        percentPosition: true, 
+        columnWidth: '.book',
+        gutter: 20
+      });
+    });
+  })
+  .fail(function (jqXHR, textStatus, error) {
+    console.error("Could not load books.json:", textStatus, error);
+  });
+
 });

@@ -4,19 +4,39 @@
     <%- include('./partials/head'); %>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js'></script>
     <script>
-
       document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
+        const calendarEl = document.getElementById('calendar');
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          /*initialDate: '2027-01-09',*/
+          events: [
+            {
+              title: 'November Meeting',
+              date: '2026-11-21'
+            },
+            {
+              title: 'January Meeting',
+              date: '2027-01-09'
+            }
+          ]
         });
+
         calendar.render();
       });
-
     </script>
   </head>
   <body>
     <%- include('./partials/navigation'); %>
-    <div id='calendar' class="container"></div>
+    <main class="container">
+      <h1>calendar</h1>
+      <p>find upcoming meeting dates below !</p>
+      <p>we are reading ~ <strong>TBD</strong> ~ next</p>
+      <p>location details will be sent out privately</p>
+      </br>
+      <p><strong>there will be NO december meeting. happy holidays !</strong></p>
+
+      <div id='calendar'></div>
+    </main>
   </body>
 </html>
